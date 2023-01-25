@@ -8,7 +8,8 @@ function App() {
     email: "",
     address:"",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
+    admin: false,
   })
 
   const inputs =[
@@ -71,7 +72,8 @@ const receiveValues =(e)=>{
         {inputs.map((input)=>
       <NewFormInput key={input.id} {...input} handleChange={handleChange} value={value[input.name]}/>
       )}
-        <button type="submit">
+      <input type="checkbox" onChange={() => setValue ({...value, admin: true})} />
+        <button className='Sub' type="submit">
           Submit
         </button>
       </form>

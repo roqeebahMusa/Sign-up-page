@@ -1,6 +1,13 @@
+import { useState } from 'react'
 import './NewFormInput.css'
 
 const NewFormInput = (props) => {
+
+  const [focused, setFocused] = useState(false)
+
+  const doFocused = () => {
+    setFocused(true)
+  }
   return (
     <div className='Formal'>
         <label>
@@ -13,7 +20,9 @@ const NewFormInput = (props) => {
           required={props.required}
           pattern={props.pattern}
           placeholder={props.placeholder}
-
+        onFocus={() => props.name === 'confirmPassword' && setFocused(true)}
+          focus = {focused.toString()}
+          onBlur={doFocused}
         />
         <span>{props.errMsg}</span>
     </div>

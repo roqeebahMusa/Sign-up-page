@@ -28,7 +28,7 @@
   .p{
     
     color: white;
-    
+
 
   }
   input{
@@ -37,4 +37,16 @@
     width: 400px;
     border-radius: 8px;
     border: none;     
+  }
+  .Sub {
+    border: none;
+    width: 60px;
+    height: 30px;
+    font-size: 15px;
+  }
+  .Sub:hover {
+     background-color:blue;
+     cursor: pointer;
+     color: white;
+     border: 20px, ;
   }
