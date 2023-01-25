@@ -14,7 +14,7 @@
     color: white;
     display: none;
   }
-
-  input:invalid ~ span{
+  
+  input:invalid[focus = "true"] ~ span {
     display: block;
   }
