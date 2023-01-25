@@ -14,7 +14,8 @@
     display: flex;
     justify-content: center;
     align-items: center ;
-    background-color:rgb(76, 180, 225);
+    background: rgb(163,46,160);
+    background: linear-gradient(90deg, rgba(163,46,160,1) 9%, rgba(200,156,207,1) 62%);
   }
   form{
     padding: 40px;
@@ -36,17 +37,19 @@
     height: 30px;
     width: 400px;
     border-radius: 8px;
-    border: none;     
+    border: none; 
   }
+  
   .Sub {
     border: none;
-    width: 60px;
+    width: 100px;
     height: 30px;
     font-size: 15px;
+    border-radius: 5px;
   }
   .Sub:hover {
-     background-color:blue;
+     background-color:rgba(163,46,160,1);
      cursor: pointer;
      color: white;
-     border: 20px, ;
+     border: 20px;
   }

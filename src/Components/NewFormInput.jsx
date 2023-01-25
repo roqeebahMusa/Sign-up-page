@@ -3,28 +3,30 @@ import './NewFormInput.css'
 
 const NewFormInput = (props) => {
 
-  const [focused, setFocused] = useState(false)
+  const [main, setMain] = useState(false)
 
-  const doFocused = () => {
-    setFocused(true)
+  const getMain = () => {
+   setMain(true)
   }
+
   return (
     <div className='Formal'>
         <label>
           {props.placeholder}
         </label>
         <input
-          type={props.type} 
-          name={props.name}
-          onChange={props.handleChange}
-          required={props.required}
-          pattern={props.pattern}
-          placeholder={props.placeholder}
-        onFocus={() => props.name === 'confirmPassword' && setFocused(true)}
-          focus = {focused.toString()}
-          onBlur={doFocused}
+        type={props.type}
+        name={props.name}
+        placeholder={props.placeholder}
+        onChange={props.handleChange}
+        pattern={props.pattern}
+        required={props.required}
+        focus = {main.toString()}
+        onBlur={getMain}
+        onFocus={() => props.name === 'confirmpassword' && setMain (true)}
         />
-        <span>{props.errMsg}</span>
+
+        <span className='err'>{props.errMsg}</span>
     </div>
     
   )
